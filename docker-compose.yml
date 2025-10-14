@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  gomcp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - MCP_HOST=0.0.0.0
+      - MCP_PORT=8080
+      - MCP_TRANSPORT_PROTOCOL=http
+      - LOG_LEVEL=INFO
+      - ENABLE_AUTH=true
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
+      - POSTGRES_DB=gomcp
+      - POSTGRES_USER=gomcp
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-gomcp_dev_password}
+      - POSTGRES_POOL_SIZE=10
+      - POSTGRES_MAX_CONNECTIONS=20
+      - SESSION_SECRET=${SESSION_SECRET:-dev_session_secret_change_in_prod}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped
+    networks:
+      - gomcp-network
+
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_DB=gomcp
+      - POSTGRES_USER=gomcp
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-gomcp_dev_password}
+      - POSTGRES_INITDB_ARGS=--encoding=UTF-8
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U gomcp -d gomcp"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - gomcp-network
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  gomcp-network:
+    driver: bridge
+

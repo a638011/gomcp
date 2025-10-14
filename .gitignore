@@ -1,0 +1,208 @@
+# ================================
+# Go Build Artifacts
+# ================================
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+bin/
+*.test
+
+# Go build cache
+*.o
+*.a
+
+# Coverage reports
+*.out
+coverage.html
+coverage.xml
+*.cover
+
+# Build errors
+build-errors.log
+
+# ================================
+# Go Dependencies
+# ================================
+# Vendor directory (if using vendor mode)
+vendor/
+
+# Go workspace files
+go.work
+go.work.sum
+
+# NOTE: go.sum should be committed
+# It's Go's dependency lockfile
+
+# ================================
+# Environment & Secrets
+# ================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.cert
+*.p12
+*.pfx
+secrets/
+credentials/
+
+# ================================
+# IDE & Editor Files
+# ================================
+# VSCode
+.vscode/
+*.code-workspace
+
+# IntelliJ IDEA / GoLand
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Cursor IDE
+.cursor/
+
+# Vim
+*.swp
+*.swo
+*.swn
+*~
+.*.sw[a-z]
+
+# Emacs
+\#*\#
+.\#*
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ================================
+# Operating System Files
+# ================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+
+# Linux
+.directory
+.Trash-*
+
+# ================================
+# Temporary Files
+# ================================
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
+
+# Air (hot reload) temporary files
+.air/
+
+# ================================
+# Database Files
+# ================================
+# PostgreSQL
+*.sql.backup
+*.dump
+postgres_data/
+pgdata/
+*.db
+*.sqlite
+*.sqlite3
+
+# Database credentials
+database.yml
+
+# ================================
+# Docker Files
+# ================================
+# Docker compose overrides
+docker-compose.override.yml
+docker-compose.override.yaml
+
+# Docker volumes
+volumes/
+
+# ================================
+# Logs
+# ================================
+*.log
+logs/
+log/
+
+# ================================
+# Testing
+# ================================
+# Test databases
+*_test.db
+test_data/
+
+# Integration test artifacts
+test/tmp/
+test/fixtures/tmp/
+
+# ================================
+# CI/CD
+# ================================
+.gitlab-ci-local/
+.github-ci-local/
+
+# ================================
+# Documentation
+# ================================
+# Generated docs (keep source docs)
+docs/build/
+site/
+
+# ================================
+# Dependencies (other languages)
+# ================================
+# Node.js (if frontend added)
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Python (if scripts added)
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# ================================
+# Monitoring & Profiling
+# ================================
+*.prof
+*.pprof
+*.trace
+
+# ================================
+# Security Scanning
+# ================================
+.trivy/
+.snyk
+gosec-report.json
+
+# ================================
+# Project Specific
+# ================================
+# Version file artifacts
+VERSION.tmp
+
+# Assets (if dynamically generated)
+# assets/generated/

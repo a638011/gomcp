@@ -1,6 +1,6 @@
 <p align="center">
   <img src="https://img.shields.io/badge/MCP-2025--06--18-blue?style=for-the-badge" alt="MCP Version">
-  <img src="https://img.shields.io/badge/Go-1.23+-00ADD8?style=for-the-badge&logo=go" alt="Go Version">
+  <img src="https://img.shields.io/badge/Go-1.24+-00ADD8?style=for-the-badge&logo=go" alt="Go Version">
   <img src="https://img.shields.io/github/license/NP-compete/gomcp?style=for-the-badge" alt="License">
   <img src="https://img.shields.io/github/v/release/NP-compete/gomcp?style=for-the-badge" alt="Release">
 </p>
@@ -93,7 +93,7 @@
 
 ### Prerequisites
 
-- Go 1.23+
+- Go 1.24+
 - (Optional) Docker/Podman
 
 ### Installation

@@ -24,11 +24,11 @@
 </p>
 
 <p align="center">
-  <a href="#-features">Features</a> •
-  <a href="#-quick-start">Quick Start</a> •
-  <a href="#-use-as-template">Use as Template</a> •
-  <a href="#-documentation">Documentation</a> •
-  <a href="#-contributing">Contributing</a>
+  <a href="#features">Features</a> |
+  <a href="#quick-start">Quick Start</a> |
+  <a href="#use-as-template">Use as Template</a> |
+  <a href="#documentation">Documentation</a> |
+  <a href="#contributing">Contributing</a>
 </p>
 
 ---
@@ -45,7 +45,7 @@
 - **Easy to Customize** - Clean architecture, modular design, extensive comments
 - **Multiple Transports** - HTTP/SSE for Cursor IDE, stdio for Claude Desktop
 
-## ✨ Features
+## Features
 
 <table>
 <tr>
@@ -55,18 +55,18 @@
 
 | Feature | Status | Description |
 |---------|:------:|-------------|
-| Tools | ✅ | 4 example tools with structured outputs |
-| Prompts | ✅ | 3 reusable prompt templates |
-| Resources | ✅ | 6 static/dynamic resources |
-| Roots | ✅ | Filesystem root definitions |
-| Completion | ✅ | Structured outputs with JSON schemas |
-| Logging | ✅ | Server→client notifications (8 levels) |
-| Pagination | ✅ | Cursor-based pagination |
-| Sampling | ✅ | Server→client LLM requests |
-| Elicitation | ✅ | Server→user data requests |
-| Progress | ✅ | Real-time progress notifications |
-| Cancellation | ✅ | Request cancellation support |
-| Ping | ✅ | Health checks |
+| Tools | Yes | 4 example tools with structured outputs |
+| Prompts | Yes | 3 reusable prompt templates |
+| Resources | Yes | 6 static/dynamic resources |
+| Roots | Yes | Filesystem root definitions |
+| Completion | Yes | Structured outputs with JSON schemas |
+| Logging | Yes | Server-to-client notifications (8 levels) |
+| Pagination | Yes | Cursor-based pagination |
+| Sampling | Yes | Server-to-client LLM requests |
+| Elicitation | Yes | Server-to-user data requests |
+| Progress | Yes | Real-time progress notifications |
+| Cancellation | Yes | Request cancellation support |
+| Ping | Yes | Health checks |
 
 </td>
 <td width="50%">
@@ -89,7 +89,7 @@
 </tr>
 </table>
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -179,7 +179,7 @@ docker-compose up -d
 
 </details>
 
-## 📦 Use as Template
+## Use as Template
 
 This repository is designed to be used as a template for your own MCP server.
 
@@ -210,7 +210,7 @@ See [docs/CUSTOMIZATION.md](docs/CUSTOMIZATION.md) for detailed instructions on:
 - Customizing the Docker setup
 - Setting up CI/CD for your repository
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 gomcp/
@@ -219,7 +219,7 @@ gomcp/
 │   ├── api/            # HTTP handlers & routing
 │   ├── completion/     # Structured outputs
 │   ├── config/         # Configuration management
-│   ├── logging/        # Server→client logs
+│   ├── logging/        # Server-to-client logs
 │   ├── mcp/            # MCP server logic
 │   ├── pagination/     # Cursor-based pagination
 │   ├── prompts/        # Prompt implementations
@@ -236,7 +236,7 @@ gomcp/
 └── Makefile           # Build commands
 ```
 
-## 🔧 Configuration
+## Configuration
 
 | Variable | Default | Description |
 |----------|---------|-------------|
@@ -248,7 +248,7 @@ gomcp/
 
 See [.env.example](.env.example) for all options.
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Run all tests
@@ -265,7 +265,7 @@ make lint
 make security-scan
 ```
 
-## 📚 Documentation
+## Documentation
 
 | Document | Description |
 |----------|-------------|
@@ -273,14 +273,13 @@ make security-scan
 | [Customization](docs/CUSTOMIZATION.md) | Guide to customizing the template |
 | [Contributing](CONTRIBUTING.md) | How to contribute |
 | [Security](SECURITY.md) | Security policy |
-| [Changelog](CHANGELOG.md) | Version history |
 
 ### External Resources
 
 - [MCP Specification](https://modelcontextprotocol.io/specification/2025-06-18)
 - [Official Go SDK](https://github.com/modelcontextprotocol/go-sdk)
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
@@ -290,11 +289,11 @@ We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guid
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [Model Context Protocol](https://modelcontextprotocol.io/) - The MCP specification
 - [Official Go SDK](https://github.com/modelcontextprotocol/go-sdk) - The foundation of this server
@@ -303,11 +302,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <p align="center">
-  <strong>Built with ❤️ for the MCP community</strong>
+  <strong>Built for the MCP community</strong>
 </p>
 
 <p align="center">
-  <a href="https://github.com/NP-compete/gomcp/stargazers">⭐ Star us on GitHub</a> •
-  <a href="https://github.com/NP-compete/gomcp/issues">🐛 Report Bug</a> •
-  <a href="https://github.com/NP-compete/gomcp/discussions">💬 Discussions</a>
+  <a href="https://github.com/NP-compete/gomcp/stargazers">Star us on GitHub</a> |
+  <a href="https://github.com/NP-compete/gomcp/issues">Report Bug</a> |
+  <a href="https://github.com/NP-compete/gomcp/discussions">Discussions</a>
 </p>

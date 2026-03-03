@@ -94,7 +94,7 @@ gomcp/
 │   ├── api/            # HTTP handlers & routing
 │   ├── completion/     # Structured outputs
 │   ├── config/         # Configuration management
-│   ├── logging/        # Server→client logs
+│   ├── logging/        # Server-to-client logs
 │   ├── mcp/            # MCP server logic
 │   ├── pagination/     # Cursor-based pagination
 │   ├── prompts/        # Prompt implementations
@@ -244,4 +244,4 @@ Feel free to open an issue with the `question` label or start a discussion.
 
 ---
 
-Thank you for contributing! 🎉
+Thank you for contributing!

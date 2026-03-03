@@ -76,7 +76,7 @@ gomcp/
 │   ├── logger/
 │   │   └── logger.go            # Application logging
 │   ├── logging/
-│   │   ├── logging.go           # MCP logging (server→client)
+│   │   ├── logging.go           # MCP logging (server-to-client)
 │   │   └── logging_test.go      # Tests
 │   ├── mcp/
 │   │   ├── server.go            # MCP server (HTTP transport)
@@ -225,10 +225,10 @@ Resources provide data to AI models:
 |---------|-------------|----------------|
 | **Roots** | Filesystem root definitions | `internal/roots/` |
 | **Completion** | Structured tool outputs | `internal/completion/` |
-| **Logging** | Server→client notifications | `internal/logging/` |
+| **Logging** | Server-to-client notifications | `internal/logging/` |
 | **Pagination** | Cursor-based pagination | `internal/pagination/` |
-| **Sampling** | Server→client LLM requests | `internal/sampling/` |
-| **Elicitation** | Server→user data requests | `internal/elicitation/` |
+| **Sampling** | Server-to-client LLM requests | `internal/sampling/` |
+| **Elicitation** | Server-to-user data requests | `internal/elicitation/` |
 | **Progress** | Real-time progress updates | Built into tools |
 | **Cancellation** | Request cancellation | Context-based |
 | **Ping** | Health checks | Built-in |
